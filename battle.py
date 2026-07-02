@@ -1,5 +1,6 @@
 from ex0 import FlameFactory, AquaFactory, CreatureFactory
 
+
 def show_creature(object):
     base = object.create_base()
     print("Testing factory")
