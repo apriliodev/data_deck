@@ -33,7 +33,8 @@ class AggressiveStrategy(BattleStrategy):
     def act(self, creature: Creature) -> str:
         if not self.is_valid(creature):
             raise InvalidStrategy(
-                f"Invalid Creature '{creature.name}' for this aggressive strategy"
+                f"Invalid Creature '{creature.name}'"
+                "for this aggressive strategy"
             )
         transform_creature = cast(TransformCapability, creature)
         m1 = transform_creature.transform()
@@ -49,7 +50,8 @@ class DefensiveStrategy(BattleStrategy):
     def act(self, creature: Creature) -> str:
         if not self.is_valid(creature):
             raise InvalidStrategy(
-                f"Invalid Creature '{creature.name}' for this defensive strategy"
+                f"Invalid Creature '{creature.name}'"
+                "for this defensive strategy"
             )
         heal_creature = cast(HealCapability, creature)
         m1 = creature.attack()

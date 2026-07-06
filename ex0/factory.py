@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from ex0.creature import Flameling, Pyrodon, Aquabub, Torragon, Creature
 
+
 class CreatureFactory(ABC):
     def __init__(self) -> None:
         super().__init__()

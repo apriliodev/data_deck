@@ -1,6 +1,7 @@
 from ex0 import FlameFactory, AquaFactory, CreatureFactory
 from ex1 import HealingCreatureFactory, TransformCreatureFactory
-from ex2 import NormalStrategy, DefensiveStrategy, AggressiveStrategy, InvalidStrategy, BattleStrategy
+from ex2 import NormalStrategy, DefensiveStrategy, AggressiveStrategy
+from ex2 import InvalidStrategy, BattleStrategy
 
 
 flame_factory = FlameFactory()
@@ -37,6 +38,7 @@ def battle(op: list[tuple[CreatureFactory, BattleStrategy]]) -> None:
                 return
             if not (i == len(op) - 2 and j == len(op) - 1):
                 print()
+
 
 opponents = [
     (aqua_factory, normal),
